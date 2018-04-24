@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-    <section class="page-header" style="background-image: url('./assets/img/header.png')">
-      <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+    <section class="page-header " style="background-image: url('./assets/img/header.png')">
+      <h1 class="project-name">{{ page.title }}</h1>
+      <h2 class="project-tagline">{{ page.description }}</h2>
+      {% if page.show_github %}
+        <a href="{{ page.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %}
+      {% if page.show_downloads %}
+        <a href="{{ page.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ page.github.tar_url }}" class="btn">Download .tar.gz</a>
+      {% endif %}
       <img id="header-logo" src="./assets/img/JSGLogo.png" alt="">
     </section>
 

@@ -1,5 +1,10 @@
 ---
-layout: default
+layout: page
+title: React image lazy loading
+description: React image lazy loading component inspired by Polymer’s Iron Image
+show_downloads: true
+show_github: true
+repository_url: https://github.com/jsguru-io/react-image-lazy-load
 ---
 
 # React image lazy loading
