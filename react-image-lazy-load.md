@@ -7,39 +7,56 @@ show_github: true
 repository_url: https://github.com/jsguru-io/react-image-lazy-load
 ---
 
-# React image lazy loading
-React image lazy loading component inspired by [Polymer's Iron Image](https://www.webcomponents.org/element/PolymerElements/iron-image)
+# React Image Lazy Load Component
+
+A simple React component that takes care of async lazy loading of images with sweet fade in animation - inspired by Polymer [IronImage](https://www.webcomponents.org/element/PolymerElements/iron-image)
 ```
 npm i react-image-lazy-load-component
 ```
 
-## How to use
 
-1. **npm install react-image-lazy-load-component**
-2. You will need 2 different images
-    - First one will be the image you want to display once it's loaded. ( Image in full HD )
-    - Second one will be a copy of the first image scaled down to **1%.** ( Image that will be displayed until the full HD image is loaded )
-3. Your code should look something like this  :arrow_down:
 
+## Look at what bad@$$ things you can do with the component
+![bad@$$ demo gif](https://raw.githubusercontent.com/jsguru-io/react-image-lazy-load/master/demo.gif)
+
+## How I'd use the component but you do you baby
 ```javascript
-import React from 'react'; // Import react
-import IronImage from 'react-image-lazy-load'; // Import our component
+// Dunno what this is but React doesn't work without it... thanks facebook -_-
+import React, { Component } from 'react';
 
-// Images
-import image from './iron-image-small.jpg'; // Low quality image ( Scaled down to 1% of it's original size )
-const hdUrl = 'https://images.unsplash.com/photo-1478562853135-c3c9e3ef7905'; // Full HD image
+// Import these bad boys B-|
+import IronImage from 'react-image-lazy-load-component';
+import 'react-image-lazy-load-component/build/ironImage.css';
 
+// This is just an example you don't need to actually name it PLACEHOLDER.jpg
+import placeholder from './PLACEHOLDER.jpg';
 
-const App = () => (
-  <div>
-      <IronImage alt="Enter alt text" placeholder={image} src={hdUrl} />
-  </div>
-);
+const imgYouWantToShow = `hd.img.url.dot.net`;
+
+class App extends Component {
+  render() {
+    return (
+      // Wrapper div with className="App" because OCD
+      <div className="App">
+        <IronImage placeholder={placeholder} src={imgYouWantToShow} alt="1998 SEO goes here" />
+      </div>
+    );
+  }
+}
 
 export default App;
 ```
-### Congrats! You made it.
 
-![alt Lazy load image preview](https://cdn-images-1.medium.com/max/800/1*st2DLLQ2Sx1fdj1bcwuROQ.gif)
+## API
 
-If you want to start from scratch and create your own image lazy loading component check out our Medium [blog post](https://medium.com/jsguru/react-image-lazy-loading-component-246e0cdcce02)
+Prop        | Description
+--- | --- 
+src         | This is the src of the image you want to display 
+placeholder | This is the placeholder that you want to show while your image is loading 
+alt         | This is the image alt text 
+
+## Wanna read something cool?
+
+There's a neat trick that you can use to create awesome visuals with this component. Just take the image you want to display scale it down to 1% of its width and height and use that as a placeholder. What this does is when the placeholder image is streched to fit the container element it will be pixelated and blurred so when higher quality image is done loading and fades in it will appear as if the blurred image is sharpening into the higher quality image. *Nice!*
+
+[![NPM](https://nodei.co/npm/react-image-lazy-load-component.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-image-lazy-load-component/)
