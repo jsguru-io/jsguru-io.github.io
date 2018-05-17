@@ -1,5 +1,7 @@
 ---
 layout: default
+recent-blog-posts: true
+recent-talks: true
 ---
 
 # [](#header-1)React image lazy loading

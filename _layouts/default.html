@@ -21,6 +21,7 @@
   <section class="main-content">
     {{ content }}
 
+    {% if page.recent-blog-posts %}
     <section class="recent-blog-posts">
       <h1>Recent blog posts</h1>
       <div class="blog-posts">
@@ -59,6 +60,28 @@
 
       </div>
     </section>
+    {% endif %}
+
+    {% if page.recent-talks %}
+    <section class="recent-blog-posts">
+      <h1>JSGuru Talks</h1>
+      <p>Every second Friday JSGuru team holds talks that cover various IT topics. We have a GitHub repo with code samples from some of them.</p>
+    
+      <div class="blog-posts">
+
+        <div class="blog-post">
+          <img src="https://cdn-images-1.medium.com/max/800/1*7xJmNfxBBUAT02x_60W5jg.png"
+            alt="React native JSGuru Talks">
+          <div class="blog-content">
+            <a href="https://github.com/jsguru-io/jsguru-talks-2018/tree/master/01_react_native_todo">
+              <h4>React Native ToDo
+              </h4>
+            </a>
+          </div>
+        </div>
+        </div>
+    </section>
+    {% endif %}
 
     <footer class="site-footer">
       {% if site.github.is_project_page %}
@@ -74,10 +97,10 @@
   {% if site.google_analytics %}
   <script type="text/javascript">
     (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', '{{ site.google_analytics }}', 'auto');
