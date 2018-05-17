@@ -2,3 +2,31 @@
 ---
 
 @import 'jekyll-theme-cayman';
+
+.recent-blog-posts {
+    .blog-posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .blog-post {
+            max-height: 300px;
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            img {
+                width: 100%;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .recent-blog-posts .blog-posts {
+        flex-direction: column;
+        .blog-post {
+            max-height: none;
+            width: 100%;
+        }
+    }
+}
