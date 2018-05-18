@@ -1,5 +1,6 @@
 ---
 layout: default
+google_analytics: true
 recent-blog-posts: true
 recent-talks: true
 ---

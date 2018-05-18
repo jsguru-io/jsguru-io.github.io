@@ -1,5 +1,6 @@
 ---
 layout: page
+google_analytics: true
 title: React image lazy loading
 description: React image lazy loading component inspired by Polymer’s Iron Image
 show_downloads: true
