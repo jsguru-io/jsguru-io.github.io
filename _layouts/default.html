@@ -2,103 +2,111 @@
 <html lang="{{ site.lang | default: " en-US " }}">
 
 <head>
-  {% if page.google_analytics %}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119570773-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    {% if page.google_analytics %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119570773-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-119570773-1');
-  </script> {% endif %}
-  <meta charset="UTF-8"> {% seo %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119570773-1');
+    </script>
+    {% endif %}
+    <meta charset="UTF-8">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 </head>
 
 <body>
-  <section class="page-header" style="background-image: url('./assets/img/header.png')">
+<section class="page-header" style="background-image: url('./assets/img/header.png')">
     <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
     <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
     <img id="header-logo" src="./assets/img/JSGLogo.png" alt="">
-  </section>
+</section>
 
 
-
-  <section class="main-content">
+<section class="main-content">
     {{ content }} {% if page.recent-blog-posts %}
     <section class="recent-blog-posts">
-      <h1>Recent blog posts</h1>
-      <div class="blog-posts">
+        <h1>Recent blog posts</h1>
+        <div class="blog-posts">
 
-        <div class="blog-post">
-          <img src="https://cdn.eusi.cloud/api/v1/f1a4305c-e431-4668-ae4c-02f78c656a41/media/1526454590477_react-lazy-loading.png"
-            alt="React lazy load">
-          <div class="blog-content">
-            <a href="https://jsguru.io/blog/React-image-lazy-load-component-Revisited">
-              <h4>React image lazy load component Revisited
-              </h4>
-            </a>
-          </div>
+            <div class="blog-post">
+                <img src="https://cdn.eusi.cloud/api/v1/f1a4305c-e431-4668-ae4c-02f78c656a41/media/1526637963430_rocket.png"
+                     alt="When is the right time to develop your product">
+                <div class="blog-content">
+                    <a href="https://jsguru.io/blog/When-is-the-right-time-to-develop-your-product---Part-1">
+                        <h4>When is the right time to develop your product - Part 1
+                        </h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="https://cdn.eusi.cloud/api/v1/f1a4305c-e431-4668-ae4c-02f78c656a41/media/1526454590477_react-lazy-loading.png"
+                     alt="React lazy load">
+                <div class="blog-content">
+                    <a href="https://jsguru.io/blog/React-image-lazy-load-component-Revisited">
+                        <h4>React image lazy load component Revisited
+                        </h4>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="https://cdn.eusi.cloud/api/v1/f1a4305c-e431-4668-ae4c-02f78c656a41/media/1524943601702_Angular_front.png"
+                     alt="Angular">
+                <div class="blog-content">
+                    <a href="https://jsguru.io/blog/Top-10-reasons-to-upgrade-to-Angular-5">
+                        <h4>Top 10 reasons to upgrade your Angular Application
+                        </h4>
+                    </a>
+                </div>
+            </div>
+
         </div>
-
-        <div class="blog-post">
-          <img src="https://cdn.eusi.cloud/api/v1/f1a4305c-e431-4668-ae4c-02f78c656a41/media/1524943601702_Angular_front.png" alt="Angular">
-          <div class="blog-content">
-            <a href="https://jsguru.io/blog/Top-10-reasons-to-upgrade-to-Angular-5">
-              <h4>Top 10 reasons to upgrade your Angular Application
-              </h4>
-            </a>
-          </div>
-        </div>
-
-        <div class="blog-post">
-          <img src="https://cdn.eusi.cloud/api/v1/f1a4305c-e431-4668-ae4c-02f78c656a41/media/1523880260287_JSG-Blog-1_Hello-World_v2.png"
-            alt="Hello World">
-          <div class="blog-content">
-            <a href="https://jsguru.io/blog/Welcome-to-JSGuru-Blog">
-              <h4>Welcome to JSGuru Blog
-              </h4>
-            </a>
-          </div>
-        </div>
-
-      </div>
     </section>
     {% endif %} {% if page.recent-talks %}
     <section class="recent-blog-posts">
-      <h1>JSGuru Talks</h1>
-      <p>Every second Friday JSGuru team holds talks that cover various IT topics. We have a GitHub repo with code samples from
-        some of them.</p>
+        <h1>JSGuru Talks</h1>
+        <p>Every second Friday JSGuru team holds talks that cover various IT topics. We have a GitHub repo with code
+            samples from
+            some of them.</p>
 
-      <div class="blog-posts">
+        <div class="blog-posts">
 
-        <div class="blog-post">
-          <img src="https://cdn-images-1.medium.com/max/800/1*7xJmNfxBBUAT02x_60W5jg.png" alt="React native JSGuru Talks">
-          <div class="blog-content">
-            <a href="https://github.com/jsguru-io/jsguru-talks-2018/tree/master/01_react_native_todo">
-              <h4>React Native ToDo
-              </h4>
-            </a>
-          </div>
+            <div class="blog-post">
+                <img src="https://cdn-images-1.medium.com/max/800/1*7xJmNfxBBUAT02x_60W5jg.png"
+                     alt="React native JSGuru Talks">
+                <div class="blog-content">
+                    <a href="https://github.com/jsguru-io/jsguru-talks-2018/tree/master/01_react_native_todo">
+                        <h4>React Native ToDo
+                        </h4>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
     {% endif %}
 
     <footer class="site-footer">
-      {% if site.github.is_project_page %}
-      <span class="site-footer-owner">
+        {% if site.github.is_project_page %}
+        <span class="site-footer-owner">
         <a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by
         <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-      {% endif %}
-      <span class="site-footer-credits">This page was generated by
+        {% endif %}
+        <span class="site-footer-credits">This page was generated by
         <a href="https://pages.github.com">GitHub Pages</a>.</span>
     </footer>
-  </section>
+</section>
 
 
 </body>
